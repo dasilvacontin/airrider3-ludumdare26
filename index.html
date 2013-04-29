@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="description" content="A simple airEngine example." />
+	<title>airEngine Test</title>
+    <script src="jquery-1.9.1.min.js"></script>
+	<script src="Bind.js"></script>
+    <script src="airEngineJS.js"></script>
+    <script src="cellvorsum.js"></script>
+
+    <style>
+        @font-face {
+            font-family: "Bazar";
+            src: url(Bazar.ttf) format("truetype");
+        }
+        p.Bazar { 
+            font-family: "Bazar", Verdana, Tahoma;
+            color: #555555;
+        }
+    	body {
+    		background-color: black;
+            margin: 0px;
+    	}
+    	canvas {
+    		background-color: black;
+            width:100%;
+            height:100%;
+    	}
+
+        #hud {
+            position:absolute;
+            left:0;
+            right:0;
+            top:80%;
+            margin-left:auto;
+            margin-right:auto;
+        }
+
+        #stats {
+            display: none;
+            font-size: 20pt;
+        }
+
+        #gamepad-notification {
+            display: none;
+            position:absolute;
+            left:0;
+            right:0;
+            top:55%;
+            margin-left:auto;
+            margin-right:auto;
+        }
+
+        #notification {
+            position:absolute;
+            left:0;
+            right:0;
+            top:40%;
+            margin-left:auto;
+            margin-right:auto;
+        }
+
+        #notification p {
+            font-size: 20pt;
+        }
+
+        a {
+            color: #3333FF;
+            text-decoration: none;
+        }
+
+        #credits {
+            opacity: 0.5;
+            position:absolute;
+            left:0;
+            right:0;
+            margin-top: 40px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+
+    </style>
+</head>
+ 
+<body align="center">
+    <div id="credits">
+        <p class="Bazar">CRAFTED BY <a href="http://twitter.com/airrider3" target="_blank">DAVID DA SILVA</a> DURING <a href="http://www.ludumdare.com/compo/category/ld-26/" target="_blank">LD26</a></p>
+    </div>
+    <div id="notification">
+        <p class="Bazar">PRESS START</p>
+    </div>
+    <div id="gamepad-notification">
+            <img src="gamepad-detected@2x.png" width="400" height="200" />
+        </div>
+    <div id="hud">
+        <p id="greeting" class="Bazar">WELCOME TO CELLVORSUM!</p>
+        <p id="stats" class="Bazar"></p>
+        <p id="instructions" class="Bazar">'WASD' TO MOVE. 'R' TO (RE)START. CONNECT GAMEPAD FOR FREE LULZ.</p>
+        <!--<p class="Bazar">CRAFTED BY <a href="http://twitter.com/airrider3" target="_blank">@AIRRIDER3</a></p>-->
+    </div>
+    <canvas id="myCanvas"></canvas>
+	
+</body>
+</html>
